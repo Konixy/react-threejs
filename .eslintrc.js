@@ -9,6 +9,7 @@ module.exports = {
     // This disables the formatting rules in ESLint that Prettier is going to be responsible for handling.
     // Make sure it's always the last config, so it gets the chance to override other configs.
     'eslint-config-prettier',
+    'plugin:tailwindcss/recommended',
   ],
   settings: {
     react: {
@@ -24,6 +25,12 @@ module.exports = {
     },
   },
   rules: {
-    // Add your own rules here to override ones from the extended configs.
+    'tailwindcss/classnames-order': 'warn',
+    'tailwindcss/enforces-negative-arbitrary-values': 'warn',
+    'tailwindcss/enforces-shorthand': 'warn',
+    'tailwindcss/migration-from-tailwind-2': 'warn',
+    'tailwindcss/no-arbitrary-value': 'off',
+    'tailwindcss/no-custom-classname': 'warn',
+    'tailwindcss/no-contradicting-classname': 'error',
   },
 };
